@@ -1,0 +1,56 @@
+<div class="collapsed-sidebar app-main">
+  <app-header (navBarToggledEvent)="setSideNavBarStatus($event)"></app-header>
+
+  <mat-sidenav-container class="app-inner mat-drawer-container mat-sidenav-container mat-drawer-transition">
+    <mat-sidenav #sideNavBar opened="true" mode="side"
+      class="sidebar-panel mat-drawer mat-sidenav ng-trigger ng-trigger-transform ng-star-inserted ps mat-drawer-side ps--active-y"
+      id="sidebar-panel" tabindex="-1" style="transform: none; visibility: visible;">
+      <mat-nav-list appaccordion="" class="navigation mat-nav-list" role="navigation">
+        <mat-list-item appaccordionlink="" class="mat-list-item ng-star-inserted" style="">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <a appaccordiontoggle="" class="relative ng-star-inserted" href="/"
+              style="flex-direction: row; box-sizing: border-box; display: flex;">
+              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">home</mat-icon>
+              <span>Dashboard</span><span fxflex="" style="flex: 1 1 0%; box-sizing: border-box;"></span>
+            </a>
+          </div>
+        </mat-list-item>
+        <mat-list-item appaccordionlink="" class="mat-list-item ng-star-inserted" style="">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <a appaccordiontoggle="" class="relative ng-star-inserted" href="/widgets"
+              style="flex-direction: row; box-sizing: border-box; display: flex;">
+              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">photo</mat-icon>
+              <span>Details</span><span fxflex="" style="flex: 1 1 0%; box-sizing: border-box;"></span>
+            </a>
+          </div>
+        </mat-list-item>
+        <mat-list-item appaccordionlink="" class="mat-list-item ng-star-inserted" style="">
+          <div class="mat-list-item-content">
+            <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+            <div class="mat-list-text"></div>
+            <a appaccordiontoggle="" class="relative ng-star-inserted" href="/charts"
+              style="flex-direction: row; box-sizing: border-box; display: flex;">
+              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">turned_in</mat-icon>
+              <span>Profile</span><span fxflex="" style="flex: 1 1 0%; box-sizing: border-box;"></span>
+            </a>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content [ngClass]="{'sidenav-content-margin': isSideNavBarOpen}"
+      class="mat-drawer-content mat-sidenav-content ng-star-inserted">
+
+      <router-outlet></router-outlet>
+      <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <app-settings></app-settings>
+
+  <app-footer></app-footer>
+</div>

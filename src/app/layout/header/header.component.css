@@ -1,0 +1,17 @@
+mat-toolbar.main-header .logo {
+    background-image: url(/assets/images/logo.svg);
+    width: 140px;
+    height: 35px;
+    background-size: cover;
+    margin-left: 20px;
+  }
+  
+  .mat-toolbar.mat-primary {
+    background: #3f51b5;
+    color: #fff;
+  }
+
+  .mat-toolbar-single-row-header {
+    height: 50px;
+  }
+  
